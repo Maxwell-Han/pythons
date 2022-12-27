@@ -1,0 +1,11 @@
+FROM python:3.10-slim-bullseye
+
+WORKDIR /api-demo
+
+COPY requirements.txt .
+
+RUN pip install -r requirements.txt
+
+COPY ./app ./app
+
+CMD [ "python", "./app/main.py" ]
