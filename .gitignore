@@ -1,2 +1,3 @@
 api-demo/venv
 redis-queue/redis-app
+redis-queue/dashboard/dashboard-env

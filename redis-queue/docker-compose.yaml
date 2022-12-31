@@ -30,3 +30,14 @@ services:
         command: rq worker --url redis://redis:6379
         links:
             - redis
+
+    dashboard:
+        container_name: dashboard 
+        build: dashboard
+        image: dashboard
+        ports: 
+            - 9181:9181
+        command: ""
+        depends_on:
+            - redis
+
